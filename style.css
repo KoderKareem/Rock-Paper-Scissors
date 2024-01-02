@@ -1,10 +1,22 @@
-.playerBtn-container{
-/* margin: 20px auto; */
+body{
+   
+    background-color: aqua;
+}
+h1{
+    text-align: center;
 }
 .playerBtn{
    
     color: azure;
     background-color: rgb(27, 27, 82);
     padding: 15px;
-    font-size: larger;
+    font-size: 35px;px
+    flex: 1;
+}
+.displayGameStatus{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    /* background-color: aqua; */
 }
