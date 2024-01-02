@@ -1,135 +1,24 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Rock-Papper-Scissrs</title>
     <meta lang="en" />
     <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./style.css">
   </head>
   <body>
     <h1>Rock-Papper-Scissrs</h1>
-    <script>
-      function game() {
-        function getComputerChoice(word) {
-          let choices = ["rock", "papper", "scissors"];
-          return (word = choices[Math.floor(Math.random() * choices.length)]);
-          console.log(getComputerChoice());
-        }
+    <div class="playerBtn-container">
+    <button id="rockButton" class="playerBtn" value="rock">rock</button>
+    <button id="paperButton" class="playerBtn" value="papper">papper</button>
+    <button id="scissorsButton" class="playerBtn" value="scissors">scissors</button>
+  </div>
 
-        // This finctions will store and update player score
-        let PlayerScore = 0;
-        function updatePlayerScore(point) {
-          PlayerScore += point;
-        }
-        function getPlayerScore() {
-          return PlayerScore;
-        }
-        // End
-        // This functions will store and update computer score
-        let computerScore = 0;
-        function updateComputerScore(point) {
-          computerScore += point;
-        }
-        function getComputerScore() {
-          return computerScore;
-        }
-        //End
-        function playGame(playerSelection, computerSelection) {
-          if (playerSelection == "rock" && computerSelection == "scissors") {
-            console.log("You won; Rock beats Scissors.");
-            updatePlayerScore(1);
-            console.log("Your Score is", getPlayerScore());
-          } else if (
-            playerSelection == "scissors" &&
-            computerSelection == "rock"
-          ) {
-            console.log("You fail, Rock beats Scissors");
-            updateComputerScore(1);
-            console.log("Computer Score is:", getComputerScore());
-          } else if (
-            playerSelection == "scissors" &&
-            computerSelection == "papper"
-          ) {
-            console.log("You won; scissors beats papper");
-            updatePlayerScore(1);
-            console.log("Your Score is", getPlayerScore());
-          } else if (
-            playerSelection == "papper" &&
-            computerSelection == "scissors"
-          ) {
-            console.log("You fail, scissors beats papper");
-            updateComputerScore(1);
-            console.log("Computer Score is:", getComputerScore());
-          } else if (
-            playerSelection == "papper" &&
-            computerSelection == "rock"
-          ) {
-            console.log("You won, papper beats rock");
-            updatePlayerScore(1);
-            console.log("Your Score is", getPlayerScore());
-          } else if (
-            playerSelection == "rock" &&
-            computerSelection == "papper"
-          ) {
-            console.log("You fail, papper beats rock");
-            updateComputerScore(1);
-            console.log("Computer Score is:", getComputerScore());
-          } else if (computerSelection == "rock" && playerSelection == "rock") {
-            if (playerSelection && computerSelection == "rock") {
-              console.log("A tie, Play Again");
-              const playerSelection = prompt("Shoot").toLowerCase();
-              const computerSelection = getComputerChoice();
-              console.log(playGame(playerSelection, computerSelection));
-            }
-          } else if (
-            playerSelection == "papper" &&
-            computerSelection == "papper"
-          ) {
-            if (playerSelection && computerSelection == "papper") {
-              console.log("A tie, Play Again");
-              const playerSelection = prompt("Shoot").toLowerCase();
-              const computerSelection = getComputerChoice();
-              console.log(playGame(playerSelection, computerSelection));
-            }
-          } else if (
-            playerSelection == "scissors" &&
-            computerSelection == "scissors"
-          ) {
-            if (playerSelection && computerSelection == "scissors") {
-              console.log("A tie, Play Again");
-              const playerSelection = prompt("Shoot").toLowerCase();
-              const computerSelection = getComputerChoice();
-              console.log(playGame(playerSelection, computerSelection));
-            }
-          } else if (playerSelection == null) {
-            console.log("You Cancel The Game, Good Bye");
-          } else {
-            console.log(
-              "Please Enter a valid input: (Rock or Papper or Scissors)"
-            );
-          }
-        }
-        for (let i = 0; i < 5; i++) {
-          playerSelection = prompt("Shoot");
-          if (playerSelection != null) {
-            playerSelection.toLowerCase();
-          }
-          const computerSelection = getComputerChoice();
-          console.log(playGame(playerSelection, computerSelection));
-        }
-        if (getPlayerScore() > getComputerScore()) {
-          console.log("You won! Your final score is ", getPlayerScore());
-        } else if (getPlayerScore() === getComputerScore()) {
-          console.log(
-            "You both have same  Your Score ",
-            getPlayerScore(),
-            "Computer Score ",
-            getComputerScore()
-          );
-        } else if (getComputerScore() > getPlayerScore()) {
-          console.log("You fail! Your final score is ", getPlayerScore());
-        }
-      }
-      console.log(game());
-    </script>
+  <div class="displayGameStatus">
+
+
+  </div>
+
+    <script src="./index.js"> </script>
+    <!-- <script src="./main.js"></script> -->
   </body>
 </html>

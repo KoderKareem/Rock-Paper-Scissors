@@ -1,0 +1,10 @@
+.playerBtn-container{
+/* margin: 20px auto; */
+}
+.playerBtn{
+   
+    color: azure;
+    background-color: rgb(27, 27, 82);
+    padding: 15px;
+    font-size: larger;
+}
