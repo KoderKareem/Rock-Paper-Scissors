@@ -14,7 +14,9 @@ Rock beats Scissors (Rock crushes Scissors)
 Paper beats Rock (Paper covers Rock)
 Scissors beats Paper (Scissors cut Paper)
 If both players choose the same shape, it's a tie and the game restarts.  
-im
+
+visit here for more info => https://www.wikihow.com/Play-Rock,-Paper,-Scissors
+
 3. Steps:
 Both players make their choice simultaneously by selecting "Rock", "Paper", or "Scissors".
 
